@@ -1,0 +1,46 @@
+.container {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+
+}
+
+#nome {
+	font-family: "Consolas";
+	font-size: 30px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;	
+    margin-left: 15px;
+	color: #FFF;
+}
+
+.logo {
+	background-color: #f8f8f8;
+}
+
+.titulo {
+	background-color: #ef8d24;
+	font-size: 35px;
+    color: #fff;
+    margin: 0;
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+.conteudo {
+    font-family: "Roboto","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+	background-color: #fff;
+    color: #4a4a4a;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 30px; 
+    font-style: normal;
+	line-height: 1.25;
+	letter-spacing: 0.01em;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}

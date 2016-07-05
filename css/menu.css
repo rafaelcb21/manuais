@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Isto é necessário para não haver rolagens horizontais quando movermos os elementos */
+html, body {overflow-x: hidden;}
+
+body {
+    display: block;
+    padding-bottom: 100px;
+	background-color: #f3f3f3;
+}
+
+header {
+    background: #3a3a3a;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	padding-left: 30px;
+	padding-right: 30px;	
+    overflow: hidden;
+}
+
+header h1 {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;
+    width: 95%;
+    font-size: 1.5em;
+}
+h1 a {color: #FFF; text-decoration: none;}
+
+h1 {
+	font-family: "Roboto","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+	font-weight: 700;
+    font-style: normal;
+	line-height: 1.25;
+	letter-spacing: 0.01em;
+	padding: 0;
+    direction: ltr;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+
+h3 {
+    font-weight: bold;
+}
+
+header input {
+    float: right;
+    padding: 10px;
+    width: 200px;
+    border: none;
+}
+
+.main {
+    padding: 30px;
+}
+.main {
+    font-size: .9em;
+    line-height: 1.2em;
+    margin-bottom: 20px;
+}
+
+p {
+	font-weight: 400;
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 0 0 10px;
+	font-family: inherit;
+	padding: 0;
+    direction: ltr;
+}
+
+p span {
+    display: block;
+}
+
+i  {
+	color: #f8f8f8;	
+}
+
+.menu-anchor {
+    width: 40px;
+    height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    text-indent: -9999px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #3a3a3a;
+}
+
+.menu-anchor:before {
+    content: "";
+    display: block;
+    margin: 7px auto;
+    width: 70%;
+    height: 0.25em;
+    background: #fff;
+    box-shadow: 0 .45em 0 0 #fff, 0 .9em 0 0 #fff;
+}
+
+.menu-active .menu-anchor {background: #d55401}
+
+menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 220px;
+    height: 100%;
+    padding-top: 10px;
+    background: #d55401;
+    box-shadow: inset -5px -10px 10px 0 rgba(0,0,0,.3)
+}
+
+menu li a {
+    display: block;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    margin: 0 10px;
+    padding: 10px;
+    color: #FFF;
+    text-decoration: none;
+}
+
+menu li a:hover {
+    background: #FFF;
+    color: #d55401;
+}
+
+
+/*
+    Aqui você esconde o menu para fora da tela 
+    O valor é exatamente a largura da sidebar #f1c40f  #ef8d24 #d55401
+*/
+menu {
+    -webkit-transform: translateX(-220px);
+    -moz-transform: translateX(-220px);
+    -ms-transform: translateX(-220px);
+    transform: translateX(-220px);
+    -webkit-transition: all .25s linear;
+    -moz-transition: all .25s linear;
+    -ms-transition: all .25s linear;
+    transition: all .25s linear;
+}
+
+/*
+    Essa é a posição original do HEADER e do MAIN
+*/
+header, .main {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transition: all .25s linear;
+    -moz-transition: all .25s linear;
+    -ms-transition: all .25s linear;
+    transition: all .25s linear;
+}
+
+/*
+   Com a classe menu-active na tag HTML
+*/
+.menu-active menu {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.menu-active header, 
+.menu-active .main {
+    -webkit-transform: translateX(220px);
+    -moz-transform: translateX(220px);
+    -ms-transform: translateX(220px);
+    transform: translateX(220px);
+}

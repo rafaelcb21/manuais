@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="css/shjs/sh_main.js"></script>
+        <script type="text/javascript" src="css/shjs/lang/sh_sh.js"></script>
+        <script type="text/javascript" src="css/shjs/lang/sh_javascript.js"></script>
+        <script type="text/javascript" src="css/shjs/lang/sh_javascript_dom.js"></script>
+        <script type="text/javascript" src="css/shjs/lang/sh_html.js"></script>
+        <script type="text/javascript" src="css/shjs/lang/sh_tcl.js"></script>
+        
+        <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+        <link type="text/css" rel="stylesheet" href="css/shjs/css/sh_neon.min.css">
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/menu.css" rel="stylesheet">
+		<!--
+			https://www.sitepoint.com/everything-need-know-html-pre-element/
+			http://pt-br.learnlayout.com/flexbox.html
+			http://tableless.com.br/fazendo-um-slide-menu-mobile-sem-plugin/
+			http://www.paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/
+			https://css-tricks.com/tale-of-animation-performance/
+			http://tableless.com.br/css-transforms/
+		-->
+		
+		<title>Documentação</title>
+	</head>
+	<body onload="sh_highlightDocument();">
+
+		
+		<header>
+			<span class="menu-anchor"></span>
+			<h1><span id="nome">BragaTI     <i class="fa fa-file-code-o fa-1x" aria-hidden="true" class="logo"></i></span></h1>
+		</header>
+
+		<menu>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Produtos</a></li>
+				<li><a href="#">Serviços</a></li>
+				<li><a href="#">Sobre</a></li>
+				<li><a href="#">Contato</a></li>
+			</ul>
+		</menu>
+		
+        <div class="container main">                    
+            <div class="titulo">
+                <h1 id="h1">Instalar NodeJs, Express, Angular 2, Couchdb, Ionic 2 e Pounchdb em Produção</h1>			
+            </div>
+                
+            <div class="conteudo">
+                <h3>Passo 1: Instalar NodeJs</h3>
+                <p>Entre no site <a href="https://nodejs.org/en/"><code>https://nodejs.org/en/</code></a> faça o download da versão corrente (ex: v.6.2.2 Current) e
+                instale o NodeJs.</p>
+                <h3>Passo 2: Instalar Express</h3>
+                <p>Instale o Express de forma global com o comando abaixo:</p>
+                <pre class="sh_tcl">npm install express-generator -g</pre>
+                <p>Após instalado o Express, crie a aplicação, que por enquanto, não terá o Angular 2.</p>
+                <pre class="sh_tcl">express myApp --hbs</pre>
+                <p>
+                    <span>A opção hbs significa Handlebars Template (Controle, Guia, Direcionamento de Templates).</span>
+                    <span>HBS é um sistema semântico de templates, na qual esta relacionado a extensões como Html e Js.</span>
+                    <span>Algumas notações nos templates {{ }}, [ ], ( ), [ ( ) ]</span>
+                    <span>Ao escolher a opção <code>--hbs</code> o Express não usará o Jade, que é default na instalação.</span>
+                    <span>Depois entre na raiz do projeto que foi criado e instale as dependências:</span>
+                    <pre class="sh_tcl">npm install</pre>
+                </p>
+
+            </div>                    
+        </div>
+	
+	<script>
+		$(document).ready(function(){
+			$('.menu-anchor').on('click touchstart', function(e){
+				$('html').toggleClass('menu-active');
+				e.preventDefault();
+			});
+		})
+	</script>
+		
+
+	</body>
+</html>
